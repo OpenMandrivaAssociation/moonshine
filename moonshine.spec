@@ -1,6 +1,6 @@
 %define name moonshine
 %define version 0.2
-%define release %mkrel 2
+%define release %mkrel 3
 
 Summary: Windows Media player based on Moonlight
 Name: %{name}
@@ -53,7 +53,6 @@ rm -rf %{buildroot}
 %doc README AUTHORS NEWS
 %_libdir/mozilla/plugins/libmoonshine-plugin.so
 %_libdir/mozilla/plugins/libmoonshine-plugin.la
-%_datadir/%name
 
 %files player
 %defattr(-,root,root)
@@ -61,3 +60,4 @@ rm -rf %{buildroot}
 %_bindir/%name
 %_datadir/applications/%name.desktop
 %_datadir/icons/hicolor/*/*/*
+%_datadir/%name
