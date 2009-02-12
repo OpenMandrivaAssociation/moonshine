@@ -1,6 +1,6 @@
 %define name moonshine
 %define version 0.2
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary: Windows Media player based on Moonlight
 Name: %{name}
@@ -38,14 +38,12 @@ content on the web and local files on a user's desktop.
 %setup -q
 
 %build
-%configure2_5x
+%configure2_5x --with-browser-plugin-dir=%_libdir/mozilla/plugins
 %make
 
 %install
 rm -rf %{buildroot}
 %makeinstall_std
-mkdir -p %buildroot%_libdir/mozilla/plugins
-mv %buildroot%_libdir/browser-plugins/* %buildroot%_libdir/mozilla/plugins/
 
 %clean
 rm -rf %{buildroot}
