@@ -11,7 +11,7 @@ License: MIT
 Group: Video
 Url: http://abock.org/moonshine/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: xulrunner-devel-unstable
+BuildRequires: xulrunner-devel
 BuildRequires: glib2-devel
 Requires: moon >= 1.0
 
@@ -38,7 +38,7 @@ content on the web and local files on a user's desktop.
 %setup -q
 
 %build
-%configure2_5x --with-browser-plugin-dir=%_libdir/mozilla/plugins
+%configure2_5x --with-browser-plugin-dir=%_libdir/mozilla/plugins --enable-xpi-build
 %make
 
 %install
