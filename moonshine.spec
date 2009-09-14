@@ -1,6 +1,6 @@
 %define name moonshine
 %define version 0.2
-%define release %mkrel 3
+%define release %mkrel 4
 
 Summary: Windows Media player based on Moonlight
 Name: %{name}
