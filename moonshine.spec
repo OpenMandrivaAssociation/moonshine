@@ -1,12 +1,13 @@
 %define name moonshine
 %define version 0.2
-%define release %mkrel 4
+%define release %mkrel 5
 
 Summary: Windows Media player based on Moonlight
 Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://abock.org/moonshine/releases/%{name}-%{version}.tar.bz2
+Source1: npupp.h
 License: MIT
 Group: Video
 Url: http://abock.org/moonshine/
@@ -36,6 +37,7 @@ content on the web and local files on a user's desktop.
 
 %prep
 %setup -q
+cp %SOURCE1 plugin/
 
 %build
 %configure2_5x --with-browser-plugin-dir=%_libdir/mozilla/plugins --enable-xpi-build
