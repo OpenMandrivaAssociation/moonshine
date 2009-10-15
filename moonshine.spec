@@ -14,6 +14,7 @@ Url: http://abock.org/moonshine/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: xulrunner-devel
 BuildRequires: glib2-devel
+BuildRequires: zip
 Requires: moon >= 1.0
 
 %description
