@@ -10,7 +10,7 @@ Source0: http://abock.org/moonshine/releases/%{name}-%{version}.tar.bz2
 Source1: npupp.h
 License: MIT
 Group: Video
-Url: http://abock.org/moonshine/
+Url: https://abock.org/moonshine/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: xulrunner-devel
 BuildRequires: glib2-devel
